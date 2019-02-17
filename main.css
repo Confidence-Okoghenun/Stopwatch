@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: relative;
+  background: #202124;
+  font-family: "Roboto", sans-serif;
+}
+.container .hide {
+  display: none;
+}
+.container .timer {
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  display: flex;
+  min-height: 60vh;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+}
+.container .timer-display {
+  width: 250px;
+  height: 250px;
+  font-size: 40px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 30px;
+  border: 10px solid white;
+}
+.container .timer-display .display-value {
+  top: 50%;
+  left: 50%;
+  color: #3895f1;
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+}
+.container .timer-display .display-value span::after {
+  content: ":";
+  font-size: 1.1em;
+  padding-left: 3px;
+}
+.container .timer-display .display-value span:nth-of-type(3)::after, .container .timer-display .display-value span:last-of-type::after {
+  display: none;
+}
+.container .timer-display .display-value span:last-of-type {
+  width: 20px;
+  font-size: 0.6em;
+  display: inline-block;
+}
+.container .timer-lap {
+  margin-bottom: 15px;
+}
+.container .timer-lap .lap {
+  display: flex;
+  margin: 0 auto 5px;
+  width: fit-content;
+  justify-content: space-between;
+}
+.container .timer-lap .lap .number {
+  margin-right: 20px;
+  color: #9396a5;
+}
+.container .timer-controls {
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .timer-controls .reset, .container .timer-controls .lap {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.container .timer-controls .reset:hover, .container .timer-controls .lap:hover {
+  background: #353944;
+}
+.container .timer-controls .start-stop {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  background: #3895f1;
+}
+.container .timer-controls .start-stop img {
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.container .timer-controls .start-stop .stop-icon {
+  display: none;
+}
+.container .timer-controls .start-stop.recording .start-icon {
+  display: none;
+}
+.container .timer-controls .start-stop.recording .stop-icon {
+  display: block;
+}
+.container .timer-controls .start-stop:hover {
+  background: #307dca;
+}
+@media (max-width: 780px) {
+  .container .timer {
+    min-height: 80vh;
+  }
+  .container .timer-display {
+    width: 230px;
+    height: 230px;
+    border: 8px solid white;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
