@@ -71,6 +71,7 @@ $resetBtn.addEventListener('click', () => {
     console.log('Stopwatch:: Timer reset')
     $startStopBtn.classList.remove('recording');
     clearInterval(msIntervalId);
+    $lapDisplay.innerHTML = '';
     
     hour = 0;
     minutes = 0;
