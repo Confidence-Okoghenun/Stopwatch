@@ -4,6 +4,8 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-shrink: 0;
     color: white;
     position: relative;
     background: #202124;
@@ -74,6 +76,12 @@ body {
             margin: 0 auto;
             font-weight: 500;
             align-items: center;
+            user-select: none;
+            -o-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
             justify-content: space-between;
             .reset, .lap{
                 cursor: pointer;
