@@ -10,10 +10,16 @@ body {
   color: white;
   position: relative;
   background: #202124;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
 }
 .container .hide {
   display: none;
+}
+.container .github-link {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
 }
 .container .timer {
   top: 50%;

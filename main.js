@@ -5,6 +5,7 @@ const $minuteDisplay = display.querySelector('.minute-display');
 const $secondsDisplay = display.querySelector('.seconds-display');
 const $milisecondsDisplay = display.querySelector('.miliseconds-display');
 const $lapDisplay = document.querySelector('.timer-lap');
+const $gitHubDisplay = document.querySelector('.github-link');
 
 //Get controls
 const controls = document.querySelector('.timer-controls');
@@ -27,6 +28,9 @@ let miliseconds = 0;
 //Functionality
 $startStopBtn.addEventListener('click', () => {
     $startStopBtn.classList.toggle('recording');
+    if($gitHubDisplay.classList.contains('hide')){
+        $gitHubDisplay.classList.remove('hide');
+    }
     if(!$startStopBtn.classList.contains('recording')) {
         clearInterval(msIntervalId);
         console.log('Stopwatch:: Timer stopped')
@@ -71,6 +75,7 @@ $resetBtn.addEventListener('click', () => {
     console.log('Stopwatch:: Timer reset')
     $startStopBtn.classList.remove('recording');
     clearInterval(msIntervalId);
+    lapArr = [];
     $lapDisplay.innerHTML = '';
     
     hour = 0;

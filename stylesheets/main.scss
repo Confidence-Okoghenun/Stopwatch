@@ -9,9 +9,15 @@ body {
     color: white;
     position: relative;
     background: #202124;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     .hide {
         display: none;
+    }
+    .github-link {
+        color: white;
+        margin-top: 10px;
+        text-align: center;
     }
     .timer {
         top: 50%;
