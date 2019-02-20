@@ -16,6 +16,9 @@ body {
 .container .hide {
   display: none;
 }
+.container .invisible {
+  visibility: hidden;
+}
 .container .github-link {
   color: white;
   margin-top: 10px;

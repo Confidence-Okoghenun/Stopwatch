@@ -31,6 +31,9 @@ $startStopBtn.addEventListener('click', () => {
     if($gitHubDisplay.classList.contains('hide')){
         $gitHubDisplay.classList.remove('hide');
     }
+    if($lapBtn.classList.contains('invisible')){
+        $lapBtn.classList.remove('invisible');
+    }
     if(!$startStopBtn.classList.contains('recording')) {
         clearInterval(msIntervalId);
         console.log('Stopwatch:: Timer stopped')
@@ -90,6 +93,10 @@ $resetBtn.addEventListener('click', () => {
     $secondsDisplay.textContent = seconds;
     $secondsDisplay.classList.add('hide');
     $milisecondsDisplay.textContent = '00';
+
+    if(!$lapBtn.classList.contains('invisible')){
+        $lapBtn.classList.add('invisible');
+    }
     
 });
 
